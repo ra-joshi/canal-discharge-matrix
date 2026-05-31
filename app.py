@@ -74,10 +74,10 @@ with st.expander("👉 Click here to modify operational demands and pool configu
         in_pool3 = st.number_input("Pool-3 Loss/Gain (+/- cfs)", value=25.0, min_value=None, step=1.0)
 
 # --- AUTOMATED REGULATOR SUMMATION LOGIC ---
-calc_khari_cr_demand = in_daskroi + in_amc1 + in_amc2 + in_sab_esc + in_pool1
-calc_karai_cr_demand = in_gwssb + in_gift + in_syphonic + in_dholka + in_pool2
-calc_jaspur_cr_demand = in_east_esc + in_piyaj + in_sanand + in_saurashtra + in_karannagar + in_pool3
 
+calc_jaspur_cr_demand = in_east_esc + in_piyaj + in_sanand + in_saurashtra + in_karannagar + in_pool3
+calc_karai_cr_demand = in_gwssb + in_gift + in_syphonic + in_dholka + in_pool2 + calc_jaspur_cr_demand
+calc_khari_cr_demand = in_daskroi + in_amc1 + in_amc2 + in_sab_esc + in_pool1 + calc_karai_cr_demand
 
 # --- CONSOLIDATED STRUCTURE GEOMETRY PROFILE DATA SCHEMA ---
 STRUCTURE_CONFIGS = [
